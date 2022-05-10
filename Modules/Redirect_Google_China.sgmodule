@@ -1,0 +1,8 @@
+#!name=Redirect Google China
+#!desc=Redirect Google China to Google Global.
+
+[URL Rewrite]
+^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 307
+
+[MITM]
+hostname = %APPEND% g.cn, www.g.cn, google.cn, www.google.cn

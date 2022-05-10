@@ -1,0 +1,9 @@
+#!name=Wikipedia Modernized
+#!desc=Redirect Wikipedia to Wikiwand.
+
+[URL Rewrite]
+^https://(\w*).(m.)?wikipedia.org/wiki https://www.wikiwand.com/$1 302
+^https://zh.(m.)?wikipedia.org/zh(-\w*)?(?=/) https://www.wikiwand.com/zh$2 302
+
+[MITM]
+hostname = %APPEND% *wikipedia.org
